@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deborah Christopher • Planner</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="w-full min-h-screen text-[#f5f0e2]">
+
+  <header class="w-full border-b border-white/10 sticky top-0 z-50" style="background: rgba(15,17,23,0.95); backdrop-filter: blur(12px);">
+    <nav class="max-w-6xl mx-auto px-6 py-4 md:py-5 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: #e8a838;">
+          <span class="text-[#0f1117] font-bold text-2xl leading-none mt-0.5">DC</span>
+        </div>
+        <span class="heading-font text-2xl font-bold tracking-tight">Deborah Christopher</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="index.html" class="nav-link text-[#b8b2a7] hover:text-[#e8a838] font-medium">Home</a>
+        <a href="about.html" class="nav-link text-[#b8b2a7] hover:text-[#e8a838] font-medium">About</a>
+        <a href="projects.html" class="nav-link text-[#b8b2a7] hover:text-[#e8a838] font-medium">Projects</a>
+        <a href="planner.html" class="nav-link text-[#b8b2a7] hover:text-[#e8a838] font-medium">Planner</a>
+        <a href="contact.html" class="nav-link text-[#b8b2a7] hover:text-[#e8a838] font-medium">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" 
+              class="md:hidden w-10 h-10 flex items-center justify-center text-[#f5f0e2] hover:text-white rounded-lg border border-white/15 bg-white/5"
+              aria-label="Toggle menu">
+        <i data-lucide="menu" class="w-5 h-5">&#9776;</i>
+      </button>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-[#0f1117]">
+      <div class="px-6 py-4 flex flex-col gap-3 text-sm">
+        <a href="index.html" class="mobile-nav-link py-2 text-[#b8b2a7]">Home</a>
+        <a href="about.html" class="mobile-nav-link py-2 text-[#b8b2a7]">About</a>
+        <a href="projects.html" class="mobile-nav-link py-2 text-[#b8b2a7]">Projects</a>
+        <a href="planner.html" class="mobile-nav-link py-2 text-[#b8b2a7]">Planner</a>
+        <a href="contact.html" class="mobile-nav-link py-2 text-[#b8b2a7]">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+<section class="max-w-5xl mx-auto px-6 py-16">
+  <div class="text-center mb-10">
+    <h2 class="heading-font text-4xl font-bold tracking-tighter">Academic Planner</h2>
+    <p class="mt-2 text-[#b8b2a7]">100 Level • B.Sc. Cybersecurity • MIVA Open University</p>
+  </div>
+
+  <!-- Student Info -->
+  <div class="bg-[#1a1d27] border border-white/10 rounded-3xl p-8 mb-8">
+    <div class="grid md:grid-cols-4 gap-6">
+      <div>
+        <p class="text-xs text-[#8a857d] uppercase tracking-widest">Student Name</p>
+        <p class="font-semibold text-lg">Deborah Christopher</p>
+      </div>
+      <div>
+        <p class="text-xs text-[#8a857d] uppercase tracking-widest">Programme</p>
+        <p class="font-semibold">B.Sc. Cybersecurity</p>
+      </div>
+      <div>
+        <p class="text-xs text-[#8a857d] uppercase tracking-widest">Level</p>
+        <p class="font-semibold">100 Level</p>
+      </div>
+      <div>
+        <p class="text-xs text-[#8a857d] uppercase tracking-widest">Semester</p>
+        <input type="text" value="First Semester 2025/2026" 
+               class="bg-transparent border-b border-white/20 w-full focus:outline-none text-white">
+      </div>
+    </div>
+  </div>
+
+  <!-- Courses Table -->
+  <div class="mb-10">
+    <h3 class="font-semibold text-xl mb-4 flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5 text-[#e8a838]"></i> 
+      Registered Courses
+    </h3>
+    
+    <div class="overflow-x-auto rounded-2xl border border-white/10">
+      <table class="w-full text-sm">
+        <thead class="bg-white/5">
+          <tr>
+            <th class="text-left p-4 font-medium">Course Code</th>
+            <th class="text-left p-4 font-medium">Course Title</th>
+            <th class="text-center p-4 font-medium">Assignment Due</th>
+            <th class="text-center p-4 font-medium">Quiz/Test</th>
+            <th class="text-center p-4 font-medium">Exam</th>
+            <th class="text-center p-4 font-medium">Status</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-white/10">
+          <tr>
+            <td class="p-4 font-mono">COS 101</td>
+            <td class="p-4">Introduction to Computing</td>
+            <td class="p-4 text-center"><input type="date" class="bg-transparent text-sm"></td>
+            <td class="p-4 text-center"><input type="date" class="bg-transparent text-sm"></td>
+            <td class="p-4 text-center"><input type="date" class="bg-transparent text-sm"></td>
+            <td class="p-4 text-center">
+              <select class="bg-[#1a1d27] border border-white/20 rounded px-2 py-1 text-sm">
+                <option>Not Started</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-4 font-mono">COS 102</td>
+            <td class="p-4">Problem Solving</td>
+            <td class="p-4 text-center"><input type="date" class="bg-transparent text-sm"></td>
+            <td class="p-4 text-center"><input type="date" class="bg-transparent text-sm"></td>
+            <td class="p-4 text-center"><input type="date" class="bg-transparent text-sm"></td>
+            <td class="p-4 text-center">
+              <select class="bg-[#1a1d27] border border-white/20 rounded px-2 py-1 text-sm">
+                <option>Not Started</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Weekly Study Schedule + Checklist -->
+  <div class="grid md:grid-cols-2 gap-8">
+    
+    <!-- Weekly Schedule -->
+    <div class="bg-[#1a1d27] border border-white/10 rounded-3xl p-7">
+      <h3 class="font-semibold text-xl mb-5 flex items-center gap-2">
+        <i data-lucide="calendar" class="w-5 h-5 text-[#e8a838]"></i> 
+        Weekly Study Schedule
+      </h3>
+      <div class="space-y-3 text-sm">
+        <div class="flex justify-between items-center"><span>Monday</span> <input type="text" placeholder="e.g. 6:00pm - 8:00pm" class="bg-transparent border-b border-white/20 w-48 text-right"></div>
+        <div class="flex justify-between items-center"><span>Tuesday</span> <input type="text" placeholder="e.g. 5:00pm - 7:00pm" class="bg-transparent border-b border-white/20 w-48 text-right"></div>
+        <div class="flex justify-between items-center"><span>Wednesday</span> <input type="text" placeholder="e.g. 4:00pm - 6:00pm" class="bg-transparent border-b border-white/20 w-48 text-right"></div>
+        <div class="flex justify-between items-center"><span>Thursday</span> <input type="text" placeholder="e.g. 6:00pm - 8:00pm" class="bg-transparent border-b border-white/20 w-48 text-right"></div>
+        <div class="flex justify-between items-center"><span>Friday</span> <input type="text" placeholder="e.g. 3:00pm - 5:00pm" class="bg-transparent border-b border-white/20 w-48 text-right"></div>
+        <div class="flex justify-between items-center"><span>Saturday</span> <input type="text" placeholder="e.g. 10:00am - 12:00pm" class="bg-transparent border-b border-white/20 w-48 text-right"></div>
+        <div class="flex justify-between items-center"><span>Sunday</span> <input type="text" placeholder="Revision / Rest" class="bg-transparent border-b border-white/20 w-48 text-right"></div>
+      </div>
+    </div>
+
+    <!-- Assignment Checklist -->
+    <div class="bg-[#1a1d27] border border-white/10 rounded-3xl p-7">
+      <h3 class="font-semibold text-xl mb-5 flex items-center gap-2">
+        <i data-lucide="check-square" class="w-5 h-5 text-[#e8a838]"></i> 
+        Assignment Checklist
+      </h3>
+      <div class="space-y-3 text-sm">
+        <label class="flex items-center gap-3 cursor-pointer">
+          <input type="checkbox" class="accent-[#e8a838]"> <span>Complete weekly readings</span>
+        </label>
+        <label class="flex items-center gap-3 cursor-pointer">
+          <input type="checkbox" class="accent-[#e8a838]"> <span>Submit assignments before deadlines</span>
+        </label>
+        <label class="flex items-center gap-3 cursor-pointer">
+          <input type="checkbox" class="accent-[#e8a838]"> <span>Review lecture notes</span>
+        </label>
+        <label class="flex items-center gap-3 cursor-pointer">
+          <input type="checkbox" class="accent-[#e8a838]"> <span>Practice coding exercises</span>
+        </label>
+        <label class="flex items-center gap-3 cursor-pointer">
+          <input type="checkbox" class="accent-[#e8a838]"> <span>Prepare for quizzes</span>
+        </label>
+        <label class="flex items-center gap-3 cursor-pointer">
+          <input type="checkbox" class="accent-[#e8a838]"> <span>Revise for exams</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Semester Goals -->
+  <div class="mt-8 bg-[#1a1d27] border border-white/10 rounded-3xl p-7">
+    <h3 class="font-semibold text-xl mb-5 flex items-center gap-2">
+      <i data-lucide="target" class="w-5 h-5 text-[#e8a838]"></i> 
+      Semester Goals
+    </h3>
+    <ul class="space-y-2 text-sm">
+      <li class="flex items-start gap-3"><span class="text-[#e8a838] mt-1">→</span> Maintain a strong GPA.</li>
+      <li class="flex items-start gap-3"><span class="text-[#e8a838] mt-1">→</span> Submit assignments on time.</li>
+      <li class="flex items-start gap-3"><span class="text-[#e8a838] mt-1">→</span> Improve Python programming skills.</li>
+      <li class="flex items-start gap-3"><span class="text-[#e8a838] mt-1">→</span> Learn basic Linux commands.</li>
+      <li class="flex items-start gap-3"><span class="text-[#e8a838] mt-1">→</span> Build at least one cybersecurity project.</li>
+    </ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="border-t border-white/10 py-8 md:py-9">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-y-3 text-sm text-[#8a857d]">
+      <div class="flex flex-col md:flex-row items-center gap-x-4 gap-y-1 text-center md:text-left">
+        <span>Deborah Christopher</span>
+        <span class="hidden md:inline">•</span>
+        <span>Email: mvibe607@gmail.com</span>
+        <span class="hidden md:inline">•</span>
+        <span>Phone: 0815 606 0812</span>
+      </div>
+
+      <div class="flex items-center gap-5">
+        <a href="#" class="hover:text-white transition-colors">Privacy</a>
+        <a href="#" class="hover:text-white transition-colors">Accessibility</a>
+        <span class="hidden md:inline">•</span>
+        <span>Learning • Building • Securing</span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
